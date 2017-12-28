@@ -1,0 +1,108 @@
+@import 'base.less';
+html,body {
+    height: 100%;
+}
+
+//导航栏
+#nav {
+    padding: 10px;
+    .mui-row {
+        // width: 100%;
+        >div {
+            a {
+                width: 100%;
+                display: block;
+                img {
+                    // width: 100px;
+                    // height: 94px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+//广告区
+#adv {
+    border-top: 1px solid #ccc;
+    padding: 10px ;
+    .mui-row {
+        .left {
+           >div {
+                >div {
+                    a {
+                        display: block;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+               }
+        }
+        .right {
+            a {
+                display: block;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+//品牌专区
+#brand {
+    padding: 0 10px ;
+    a {
+        display: block;
+        img {
+            width: 100%;
+        }
+    }
+}
+//运动生活专区
+#sports,
+#women,
+#men {
+    padding: 0 10px;
+    a {
+        img {
+            width: 100%;       
+        }
+    }
+    .mui-row {
+        >div {
+            padding: 0 5px;
+            .product {
+                    padding:  0 5px;
+                    box-shadow: 0px 0px 5px #ccc;
+                    text-align: center;
+                    padding-bottom: 10px;
+                    margin-top: 10px;
+                    a {
+                        display: block;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .text {
+                        margin-top: 15px;
+                        font-size: 14px;
+                        height: 28px;
+                        line-height: 14px;
+                        overflow: hidden;
+                    }
+                    .price {
+                        margin-top: 10px;
+                        font-size: 12px;
+                        span {
+                            color:#f40;
+                        }
+                        del {
+                            margin-top: 15px;
+                            color: #ccc;
+                        }
+                    }
+                    
+                }
+        }
+    }
+}

@@ -1,0 +1,153 @@
+img {
+  vertical-align: middle;
+}
+#header {
+  height: 45px;
+  background-color: #006699;
+  color: #fff;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+#header h4 {
+  margin-top: 0;
+  text-align: center;
+  line-height: 45px;
+}
+#header a {
+  color: #fff;
+  position: absolute;
+  right: 10px;
+  top: 14px;
+}
+#footor {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  left: 0;
+  height: 50px;
+  background-color: #006699;
+  z-index: 1000;
+}
+#footor .mui-row {
+  background-color: #006699;
+  width: 100%;
+}
+#footor .mui-row > div a {
+  padding: 11px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+}
+#footor .mui-row > div a::before {
+  display: block;
+}
+#footor .mui-row > div a.active {
+  color: orange;
+}
+#main {
+  width: 100%;
+  height: 100%;
+  padding-top: 45px;
+  padding-bottom: 50px;
+  background-color: #fff;
+}
+html,
+body {
+  height: 100%;
+}
+#nav {
+  padding: 10px;
+}
+#nav .mui-row > div a {
+  width: 100%;
+  display: block;
+}
+#nav .mui-row > div a img {
+  width: 100%;
+}
+#adv {
+  border-top: 1px solid #ccc;
+  padding: 10px ;
+}
+#adv .mui-row .left > div > div a {
+  display: block;
+}
+#adv .mui-row .left > div > div a img {
+  width: 100%;
+}
+#adv .mui-row .right a {
+  display: block;
+}
+#adv .mui-row .right a img {
+  width: 100%;
+}
+#brand {
+  padding: 0 10px ;
+}
+#brand a {
+  display: block;
+}
+#brand a img {
+  width: 100%;
+}
+#sports,
+#women,
+#men {
+  padding: 0 10px;
+}
+#sports a img,
+#women a img,
+#men a img {
+  width: 100%;
+}
+#sports .mui-row > div,
+#women .mui-row > div,
+#men .mui-row > div {
+  padding: 0 5px;
+}
+#sports .mui-row > div .product,
+#women .mui-row > div .product,
+#men .mui-row > div .product {
+  padding: 0 5px;
+  box-shadow: 0px 0px 5px #ccc;
+  text-align: center;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+#sports .mui-row > div .product a,
+#women .mui-row > div .product a,
+#men .mui-row > div .product a {
+  display: block;
+}
+#sports .mui-row > div .product a img,
+#women .mui-row > div .product a img,
+#men .mui-row > div .product a img {
+  width: 100%;
+}
+#sports .mui-row > div .product .text,
+#women .mui-row > div .product .text,
+#men .mui-row > div .product .text {
+  margin-top: 15px;
+  font-size: 14px;
+  height: 28px;
+  line-height: 14px;
+  overflow: hidden;
+}
+#sports .mui-row > div .product .price,
+#women .mui-row > div .product .price,
+#men .mui-row > div .product .price {
+  margin-top: 10px;
+  font-size: 12px;
+}
+#sports .mui-row > div .product .price span,
+#women .mui-row > div .product .price span,
+#men .mui-row > div .product .price span {
+  color: #f40;
+}
+#sports .mui-row > div .product .price del,
+#women .mui-row > div .product .price del,
+#men .mui-row > div .product .price del {
+  margin-top: 15px;
+  color: #ccc;
+}

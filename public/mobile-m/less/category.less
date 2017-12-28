@@ -1,0 +1,63 @@
+@import 'base.less';
+html,body {
+    height: 100%;
+}
+#main {
+    background-color: #ccc;
+    height: 100%;
+    .left {
+        float: left;
+        ul {
+            li {
+                &.active {
+                    a {
+                        background-color: #ccc;
+                        color: @main-color;
+                    }
+                }
+                a {
+                    width: 80px;
+                    height: 40px;
+                    background-color: #fff;
+                    border-bottom: 1px solid #ccc;
+                    display: block;
+                    color: #666;
+                    font-size: 14px;
+                    text-align: center;
+                    line-height: 40px;
+               }
+            }
+        }
+    }
+    .right {
+        overflow: hidden;
+        padding: 10px;
+        width: auto;
+        left: 80px;
+        top: 45px;
+        bottom: 50px;
+        .mui-scroll {
+            position: relative;
+            p {
+                margin-top: 10px;
+            }
+            .mui-row {
+                background-color: #fff;
+                >div { 
+                    a {
+                        display: block;
+                        img {
+                            width: 100%;
+                        }
+                        p {
+                            font-size: 12px;
+                            text-align: center;
+                            margin-bottom: 0px;
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+}

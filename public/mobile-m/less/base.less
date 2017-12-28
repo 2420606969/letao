@@ -1,0 +1,93 @@
+//写一些公共样式
+@main-color:#006699;
+//去除图片底部
+img {
+    vertical-align: middle;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+ul,li {
+    list-style: none;
+}
+h4 {
+    font-weight: normal;
+}
+//头部是公共的，写在公共样式里面
+#header {
+    height: 45px;
+    background-color: @main-color;
+    color: #fff;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    h4 {
+        margin-top: 0;
+        text-align: center;
+        line-height: 45px;
+
+    }
+    a.right {
+        color: #fff;
+        position: absolute;
+        right: 10px;
+        top: 14px;
+    }
+    a.left {
+        color: #fff;
+        position: absolute;
+        left: 10px;
+        top: 14px;
+    }
+    >form {
+        padding-left: 30px;
+        padding-right: 30px;          
+        input {
+            width: 100%;
+            font-size: 14px;
+            text-align: left;
+            height: 30px;
+            margin-top: 7px;
+            background-color: #fff;
+            //框架里面将input输入字体变成了白色,所以需要重新设置
+            color: #000;
+        }
+    }
+}
+//底部是公共的，写在公共样式里面
+#footor {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    left: 0;
+    height: 50px;
+    background-color: @main-color;
+    z-index: 1000;
+    .mui-row {
+        background-color: @main-color;
+        width: 100%;
+        >div {
+            a {
+                padding: 11px;
+                text-align: center;
+                font-size: 14px;
+                color: #fff;
+                &::before {
+                    display: block;
+                }
+                &.active {
+                    color: orange;
+                }
+            }
+        }
+    }
+}
+//主体部分
+#main {
+    width: 100%;
+    height: 100%;
+    padding-top: 45px;
+    padding-bottom: 50px;
+    background-color: #fff;
+}

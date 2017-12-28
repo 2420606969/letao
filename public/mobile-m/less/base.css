@@ -1,0 +1,84 @@
+img {
+  vertical-align: middle;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+h4 {
+  font-weight: normal;
+}
+#header {
+  height: 45px;
+  background-color: #006699;
+  color: #fff;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+#header h4 {
+  margin-top: 0;
+  text-align: center;
+  line-height: 45px;
+}
+#header a.right {
+  color: #fff;
+  position: absolute;
+  right: 10px;
+  top: 14px;
+}
+#header a.left {
+  color: #fff;
+  position: absolute;
+  left: 10px;
+  top: 14px;
+}
+#header > form {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+#header > form input {
+  width: 100%;
+  font-size: 14px;
+  text-align: left;
+  height: 30px;
+  margin-top: 7px;
+  background-color: #fff;
+  color: #000;
+}
+#footor {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  left: 0;
+  height: 50px;
+  background-color: #006699;
+  z-index: 1000;
+}
+#footor .mui-row {
+  background-color: #006699;
+  width: 100%;
+}
+#footor .mui-row > div a {
+  padding: 11px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+}
+#footor .mui-row > div a::before {
+  display: block;
+}
+#footor .mui-row > div a.active {
+  color: orange;
+}
+#main {
+  width: 100%;
+  height: 100%;
+  padding-top: 45px;
+  padding-bottom: 50px;
+  background-color: #fff;
+}
