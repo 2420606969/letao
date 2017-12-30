@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情页面</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="./less/detail.less">
+    <script src="./lib/less/less.js"></script>
+</head>
+<body>
+    <header id='header'>
+            <a href="#" class='fa fa-arrow-left left'></a>
+            <h4>商品详情</h4>
+    </header>
+    <main id="main">
+        <div class="mui-scroll-wrapper" id="pullrefresh">
+            <div class="mui-scroll">
+                <div class="product-detail">
+                    <div class="mui-slider product-img">
+                        <div class="mui-slider-group mui-slider-loop">
+                            <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="./images/banner1.png" /></a></div>
+                        </div>
+                        <div class="mui-slider-indicator">
+                                <div class="mui-indicator mui-active"></div>
+                        </div>
+                    </div>
+                    <div class="product-text">Sport飓风 Nike    Kwazi 休闲运动鞋男 844839-002-001-100-400
+                    </div>
+                    <div class="product-price">价格:
+                        <strong>￥499.1</strong>
+                        <del>￥888.1</del>
+                    </div>
+                    <div class="product-size">尺码:
+                        <span>35</span>
+                        <span>36</span>
+                        <span>37</span>
+                        <span>37</span>
+                        <span>37</span>
+                        <span>37</span>
+                        <span>37</span>
+                        <span>37</span>
+                        <span>37</span>
+                    </div>
+                    <div class="product-count">数量:
+                        <div class="num">
+                            <a href="#" class='reduce'>-</a>
+                            <input type="number" class='count'>
+                            <a href="#" class='add'>+</a>
+                        </div>
+                        剩余:<span>20</span>件
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </main>
+    <footor id='footor'>
+           <a href="#" class='btn_cart fa fa-shopping-cart'></a>
+           <button type="button" class="mui-btn mui-btn-warning btn-buy">立即购买</button>
+           <button type="button" class="mui-btn mui-btn-danger btn-cart">加入购物车</button>
+    </footor>  
+    <script id='productDetailTem' type='text/html'>
+        <div class="mui-slider product-img">
+            <div class="mui-slider-group mui-slider-loop">
+                {{each pic as value i}}
+                <div class="mui-slider-item"><a href="#"><img src="{{value.picAddr}}"/></a></div>
+                <!-- <div class="mui-slider-item"><a href="#"><img src="{{value.picAddr}}"/></a></div> -->
+                {{/each}}
+            </div>
+            <div class="mui-slider-indicator">
+                {{each pic as value i}}
+                    <div class="mui-indicator mui-active"></div>
+                {{/each}}    
+            </div>
+        </div>
+        <div class="product-text">{{proName}}
+        </div>
+        <div class="product-price">价格:
+            <strong>￥{{price}}</strong>
+            <del>￥{{oldPrice}}</del>
+        </div>
+        <div class="product-size">尺码:
+            {{each size as value i}}
+            <span>{{value}}</span>
+            {{/each}}
+        </div>
+        <div class="product-count">数量:
+            <div class="num">
+                <a href="#" class='reduce'>-</a>
+                <input type="number" class='count'>
+                <a href="#" class='add'>+</a>
+            </div>
+            剩余:<span>{{num}}</span>件
+        </div>
+    </script>  
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/zepto/zepto.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./js/detail.js"></script>    
+</body>
+</html>

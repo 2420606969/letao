@@ -1,0 +1,81 @@
+@import 'base.less';
+//底部样式
+#footor {
+    background-color: #ccc;
+    padding: 10px;
+    a {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+    .btn-buy {
+        float: right;
+    }
+    .btn-cart {
+        float: right;
+        margin-right: 10px;
+    }
+}
+//主体部分样式
+#main {
+    .mui-scroll-wrapper{
+        position: relative;
+        height: 100%;
+        .product-detail {
+            .product-text {
+               padding: 10px;
+               border-bottom: 1px solid #ccc;
+            }
+            .product-price {
+                padding: 10px;
+                border-bottom: 1px solid #ccc;
+                font-size: 14px;
+                strong {
+                    color:orangered;
+                    font-size: 23px;
+                }
+                del {
+                    color: #ccc;
+                }
+            }
+            .product-size {
+                padding: 10px;
+                border-bottom: 1px solid #ccc;
+                font-size: 14px;
+                line-height: 30px;
+                span {
+                    display: inline-block;
+                    width: 26px;
+                    height: 26px;
+                    line-height: 26px;
+                    border: 1px solid #ccc;
+                    text-align: center;
+                }
+            }
+            .product-count {
+                padding: 10px;
+                border-bottom: 1px solid #ccc;
+                font-size: 14px;
+                .num {
+                    display: inline-block;
+                    font-size: 0px;
+                    .reduce,
+                    .add,
+                    .count {
+                        display: inline-block;
+                        width: 26px;
+                        height: 26px;
+                        line-height: 26px;
+                        border: 1px solid #ccc;
+                        text-align: center;
+                    }
+                    .count {
+                        transform:translateY(4px);
+                    }
+                }
+            }
+    
+        }
+    }
+    
+}

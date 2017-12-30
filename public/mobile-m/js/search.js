@@ -3,6 +3,8 @@ $(function(){
     selectHistory();
     deleteHistory();
     clearAllHistory();
+
+
 })
 //添加历史记录函数
 function addHistory(){
@@ -23,6 +25,9 @@ function addHistory(){
             localStorage.setItem('historyData',JSON.stringify(historyData));
         }
         selectHistory();
+        $('.secrchForm input').val('');
+         //将搜索的内容发送到详情页,页面跳转
+        window.location.href='productList.html?key='+search;
     })
 }
 //查询函数

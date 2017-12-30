@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品列表页面</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="./less/productList.less">
+    <script src="./lib/less/less.js"></script>
+</head>
+<body>
+    <header id='header'>
+            <a href="#" class='fa fa-arrow-left left'></a>
+            <h4>搜索中心</h4>
+    </header>
+    <main id="main">
+        <div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">         
+                <div class="secrchForm">
+                    <input type="search" placeholder="请输入您想要搜索的商品">
+                    <button type="button" class="mui-btn mui-btn-primary">搜索</button>
+                </div>
+                <div class="productHead">
+                    <div class="mui-row">
+                        <div class="mui-col-xs-3 active" data-type='time' data-sort='1'>
+                            <a href="">上架时间
+                                <i class='fa fa-angle-up'></i>
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-3" data-type='price' data-sort='1'>
+                            <a href="">价格
+                                <i class='fa fa-angle-down'></i>
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-3" data-type='number' data-sort='1'>
+                            <a href="">销量
+                                <i class='fa fa-angle-down'></i>
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-3" data-type='discount' data-sort='1'>
+                            <a href="">折扣
+                                <i class='fa fa-angle-down'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="productBody">
+                    <div class="mui-row">
+                        <!-- <div class="mui-col-xs-6">
+                                <div class="product">
+                                    <a href="#">
+                                        <img src="./images/product.jpg" alt="">
+                                    </a>
+                                    <div class="text">adidas阿迪达斯 男式 场下休闲篮球鞋S83700</div>
+                                    <div class="price">
+                                        <span>￥560.00</span>
+                                        <del>￥888.00</del>
+                                    </div>
+                                    <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                                </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>    
+        </div>    
+    </main>
+    <footor id='footor'>
+            <!-- <div class="mui-content"> -->
+                <div class="mui-row">
+                    <div class="mui-col-xs-3">
+                        <a href="./index.html" class="tab_home fa fa-home now active">首页 
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-3 ">
+                        <a href="./category.html" class="tab_cate fa fa-bars">分类 
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-3 ">
+                        <a href="" class="tab_cart fa fa-shopping-cart">购物车  
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-3 ">
+                        <a href="" class="tab_user fa fa-user">个人中心
+                        </a>
+                    </div>
+                </div>
+            <!-- </div> -->
+    </footor>
+    <script id="productListTem" type='text/html'>
+        {{each data as value}}
+        <div class="mui-col-xs-6">
+                <div class="product" data-id='{{value.id}}'>
+                    <a href="#">
+                        <img src="{{value.pic[0].picAddr}}" alt="">
+                    </a>
+                    <div class="text">{{value.proName}}</div>
+                    <div class="price">
+                        <span>{{value.price}}</span>
+                        <del>{{value.oldPrice}}</del>
+                    </div>
+                    <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                </div>
+            </div>
+        {{/each}}    
+    </script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/zepto/zepto.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./js/productList.js"></script>    
+</body>
+</html>

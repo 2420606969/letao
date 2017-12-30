@@ -142,3 +142,22 @@ body {
   margin-top: 15px;
   color: #ccc;
 }
+#main > div {
+  position: relative;
+  height: 100%;
+}
+#main > div > div .productHead {
+  background-color: #ccc;
+}
+#main > div > div .productHead .mui-row .mui-col-xs-3 a {
+  padding: 5px 0;
+  display: block;
+  font-size: 14px;
+  text-align: center;
+}
+#main > div > div .productHead .mui-row .mui-col-xs-3 a i {
+  font-weight: bolder;
+}
+#main > div > div .productHead .mui-row .mui-col-xs-3.active a {
+  color: #f40;
+}
