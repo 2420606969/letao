@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的乐淘</title>
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="./less/cart.less">
+    <script src="./lib/less/less.js"></script>
+</head>
+<body>
+    <header id='header'>
+            <a href="#" class='fa fa-arrow-left left'></a>
+            <h4>我的购物车页面</h4>
+    </header>
+    <main id="main">
+        <ul class="mui-table-view">
+            <!-- <li class="mui-table-view-cell mui-transitioning mui-selected">
+                <div class="mui-slider-right mui-disabled mui-selected">
+                    <a class="mui-btn mui-btn-blue">编辑</a>
+                    <a class="mui-btn mui-btn-red">删除</a>
+                </div>
+                <div class="mui-slider-handle mui-navigate-right">
+                    <a href="javascript:;">
+                        <img class="mui-media-object mui-pull-left" src="./images/product.jpg">
+                        <div class="mui-media-body">
+                           <div class="product-name">匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮</div>
+                           <div class="product-price">
+                               <strong>￥499.1</strong>
+                               <del>￥888.1</del>
+                           </div>
+                           <div class="product-num">x<span>1</span>双</div>
+                           <div class="product-size">鞋码:<span>50</span></div>
+                           <div class="product-input">
+                               <input type="checkbox">
+                           </div>
+                        </div>
+                    </a>
+                </div>
+            </li> -->
+        </ul>
+        <div class="order">
+            <div class="order-text">订单总金额:￥<span>0.00</span></div>
+            <button class="mui-btn mui-btn-danger ordered">生成订单</button>
+        </div>
+    </main>   
+    <footor id='footor'>
+            <!-- <div class="mui-content"> -->
+                <div class="mui-row">
+                    <div class="mui-col-xs-3">
+                        <a href="./index.html" class="tab_home fa fa-home now  index">首页 
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-3 ">
+                        <a href="./category.html" class="tab_cate fa fa-bars category">分类 
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-3 ">
+                        <a href="" class="tab_cart fa fa-shopping-cart active cart">购物车  
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-3 ">
+                        <a href="./user.html" class="tab_user fa fa-user person">个人中心
+                        </a>
+                    </div>
+                </div>
+            <!-- </div> -->
+    </footor>
+    <script id="cartProductTemp" type='text/html'>
+        {{each rows as value }}
+            <li class="mui-table-view-cell mui-transitioning mui-selected" data-productid="{{value.productId}}">
+                <div class="mui-slider-right mui-disabled mui-selected">
+                    <a class="mui-btn mui-btn-blue btn-edit" data-id='{{value.id}}' data-nowsize='{{value.size}}' data-prosize='{{value.productSize}}' data-num='{{value.num}}'>编辑</a>
+                    <a class="mui-btn mui-btn-red btn-delete" data-id={{value.id}}>删除</a>
+                </div>
+                <div class="mui-slider-handle mui-navigate-right">
+                    <a href="javascript:;">
+                        <img class="mui-media-object mui-pull-left" src="{{value.pic[0].picAddr}}">
+                        <div class="mui-media-body">
+                           <div class="product-name">{{value.proName}}</div>
+                           <div class="product-price" data-price='{{value.price}}'>
+                               <strong>￥{{value.price}}</strong>
+                               <del>￥{{value.oldPrice}}</del>
+                           </div>
+                           <div class="product-num">x<span>{{value.num}}</span>双</div>
+                           <div class="product-size">鞋码:<span>{{value.size}}</span></div>
+                           <div class="product-input">
+                               <input type="checkbox" checked='true'>
+                           </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+        {{/each}}
+    </script>
+    <script id='editProduct' type='text/html'>
+        <div class="product-size1">尺码:
+            {{each size as value i}}
+            {{if nowsize==value}}
+            <span class='active'>{{value}}</span>
+            {{/if}}
+            <span>{{value}}</span>
+            {{/each}}
+        </div>
+        <div class="product-count1">数量:
+            <div class="num">
+                <a href="#" class='reduce'>-</a>
+                <span class='count'>{{num}}</span>
+                <a href="#" class='add'>+</a>
+            </div>
+            剩余:<span class='cv'>{{num}}</span>件
+        </div>
+    
+    </script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./lib/zepto/zepto.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/base.js"></script>
+</body>
+</html>

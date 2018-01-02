@@ -1,0 +1,106 @@
+@import 'base.less';
+#main {
+    ul {
+        li {
+            .mui-navigate-right {
+                img {
+                    width: 60px;
+                    height: 60px;
+                    //去除默认样式
+                    max-width: 100px;
+                    display: block;
+                }
+                .mui-media-body {
+                    font-size: 12px;
+                    position: relative;
+                    .product-name {
+                        font-size: 14px;
+                        height: 40px;
+                        line-height: 20px;
+                        overflow: hidden;
+                    }
+                    .product-price{
+                        strong {
+                            font-style: 20px;
+                            color: orangered;
+                        } 
+                        del {
+                            color: #ccc;
+                            font-size: 12px;
+                        }
+                    }
+                    .product-num{
+                        position: absolute;
+                        right: 20px;
+                        top: 43px;
+    
+                    }
+                    .product-size{
+                        font-size: 14px;
+                    }
+                    .product-input{}
+                }
+            }
+        }
+    }
+    .order {
+        z-index: 999;
+        background-color: #fff;
+        width: 100%;
+        position: fixed;
+        bottom: 50px;
+        .order-text {
+            float: left;
+            padding-left: 20px;
+            color: #f40;
+            font-size: 14px;
+            font-weight: bold;
+            padding-top: 7px;
+        }
+        .ordered {
+            float: right;
+        }
+    }
+    
+}
+.product-size1 {
+    padding: 10px;
+    font-size: 14px;
+    line-height: 30px;
+    span {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border: 1px solid #ccc;
+        text-align: center;
+        &.active {
+            background-color: #fa672d;
+        }
+    }
+}
+.product-count1 {
+    padding: 10px;
+    font-size: 14px;
+    line-height: 29px;
+    .num {
+        display: inline-block;
+        font-size: 0px;
+        
+        .reduce,
+        .add,
+        .count {
+            display: inline-block;
+            width: 26px;
+            height: 26px;
+            line-height: 26px;
+            border: 1px solid #ccc;
+            text-align: center;
+            font-size: 12px;
+        }
+        .count {
+            padding: 0;
+            transform:translateY(0px);
+        }
+    }
+}

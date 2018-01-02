@@ -1,0 +1,106 @@
+@import 'base.less';
+#main {
+    ul {
+        li {
+            .mui-navigate-right {
+                img {
+                    width: 1.875rem;
+                    height: 1.875rem;
+                    //去除默认样式
+                    max-width: 3.125rem;
+                    display: block;
+                }
+                .mui-media-body {
+                    font-size: 0.375rem;
+                    position: relative;
+                    .product-name {
+                        font-size: 0.4375rem;
+                        height: 1.25rem;
+                        line-height: 0.625rem;
+                        overflow: hidden;
+                    }
+                    .product-price{
+                        strong {
+                            font-style: 0.625rem;
+                            color: orangered;
+                        } 
+                        del {
+                            color: #ccc;
+                            font-size: 0.375rem;
+                        }
+                    }
+                    .product-num{
+                        position: absolute;
+                        right: 0.625rem;
+                        top: 1.34375rem;
+    
+                    }
+                    .product-size{
+                        font-size: 0.4375rem;
+                    }
+                    .product-input{}
+                }
+            }
+        }
+    }
+    .order {
+        z-index: 999;
+        background-color: #fff;
+        width: 100%;
+        position: fixed;
+        bottom: 1.5625rem;
+        .order-text {
+            float: left;
+            padding-left: 0.625rem;
+            color: #f40;
+            font-size: 0.4375rem;
+            font-weight: bold;
+            padding-top: 0.21875rem;
+        }
+        .ordered {
+            float: right;
+        }
+    }
+    
+}
+.product-size1 {
+    padding: 0.3125rem;
+    font-size: 0.4375rem;
+    line-height: 0.9375rem;
+    span {
+        display: inline-block;
+        width: 0.9375rem;
+        height: 0.9375rem;
+        line-height: 0.9375rem;
+        border: 0.03125rem solid #ccc;
+        text-align: center;
+        &.active {
+            background-color: #fa672d;
+        }
+    }
+}
+.product-count1 {
+    padding: 0.3125rem;
+    font-size: 0.4375rem;
+    line-height: 0.90625rem;
+    .num {
+        display: inline-block;
+        font-size: 0px;
+        
+        .reduce,
+        .add,
+        .count {
+            display: inline-block;
+            width: 0.8125rem;
+            height: 0.8125rem;
+            line-height: 0.8125rem;
+            border: 0.03125rem solid #ccc;
+            text-align: center;
+            font-size: 0.375rem;
+        }
+        .count {
+            padding: 0;
+            transform:translateY(0px);
+        }
+    }
+}

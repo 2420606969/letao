@@ -142,49 +142,62 @@ body {
   margin-top: 15px;
   color: #ccc;
 }
-#footor {
-  background-color: #ccc;
-  padding: 10px;
+#main ul li .mui-navigate-right img {
+  width: 60px;
+  height: 60px;
+  max-width: 100px;
+  display: block;
 }
-#footor a {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-#footor .btn-buy {
-  float: right;
-}
-#footor .btn-cart {
-  float: right;
-  margin-right: 10px;
-}
-#main .mui-scroll-wrapper {
+#main ul li .mui-navigate-right .mui-media-body {
+  font-size: 12px;
   position: relative;
-  height: 100%;
 }
-#main .mui-scroll-wrapper .product-detail .product-text {
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
+#main ul li .mui-navigate-right .mui-media-body .product-name {
+  font-size: 14px;
+  height: 40px;
+  line-height: 20px;
+  overflow: hidden;
 }
-#main .mui-scroll-wrapper .product-detail .product-price {
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
+#main ul li .mui-navigate-right .mui-media-body .product-price strong {
+  font-style: 20px;
+  color: orangered;
+}
+#main ul li .mui-navigate-right .mui-media-body .product-price del {
+  color: #ccc;
+  font-size: 12px;
+}
+#main ul li .mui-navigate-right .mui-media-body .product-num {
+  position: absolute;
+  right: 20px;
+  top: 43px;
+}
+#main ul li .mui-navigate-right .mui-media-body .product-size {
   font-size: 14px;
 }
-#main .mui-scroll-wrapper .product-detail .product-price strong {
-  color: orangered;
-  font-size: 23px;
+#main .order {
+  z-index: 999;
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  bottom: 50px;
 }
-#main .mui-scroll-wrapper .product-detail .product-price del {
-  color: #ccc;
+#main .order .order-text {
+  float: left;
+  padding-left: 20px;
+  color: #f40;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 7px;
 }
-#main .mui-scroll-wrapper .product-detail .product-size {
+#main .order .ordered {
+  float: right;
+}
+.product-size1 {
   padding: 10px;
-  border-bottom: 1px solid #ccc;
   font-size: 14px;
   line-height: 30px;
 }
-#main .mui-scroll-wrapper .product-detail .product-size span {
+.product-size1 span {
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -192,22 +205,21 @@ body {
   border: 1px solid #ccc;
   text-align: center;
 }
-#main .mui-scroll-wrapper .product-detail .product-size span.active {
+.product-size1 span.active {
   background-color: #fa672d;
 }
-#main .mui-scroll-wrapper .product-detail .product-count {
+.product-count1 {
   padding: 10px;
-  border-bottom: 1px solid #ccc;
   font-size: 14px;
   line-height: 29px;
 }
-#main .mui-scroll-wrapper .product-detail .product-count .num {
+.product-count1 .num {
   display: inline-block;
   font-size: 0px;
 }
-#main .mui-scroll-wrapper .product-detail .product-count .num .reduce,
-#main .mui-scroll-wrapper .product-detail .product-count .num .add,
-#main .mui-scroll-wrapper .product-detail .product-count .num .count {
+.product-count1 .num .reduce,
+.product-count1 .num .add,
+.product-count1 .num .count {
   display: inline-block;
   width: 26px;
   height: 26px;
@@ -216,7 +228,7 @@ body {
   text-align: center;
   font-size: 12px;
 }
-#main .mui-scroll-wrapper .product-detail .product-count .num .count {
+.product-count1 .num .count {
   padding: 0;
   transform: translateY(0px);
 }
